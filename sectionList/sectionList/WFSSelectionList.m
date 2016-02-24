@@ -73,7 +73,7 @@
          btn.frame = CGRectMake(totalWidth+_btnSpace*i, _btnOffsetY, [_sectionFrameArray[i] floatValue], _btnHeight);
         [btn setTitleColor:_titleColor forState:0];
         [btn.titleLabel setFont:[UIFont systemFontOfSize:_btnTitleFont]];
-        [btn setBackgroundColor:[UIColor blueColor]];
+//        [btn setBackgroundColor:[UIColor blueColor]];
         
         UIImageView *subImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"choose"]];
         [subImage setFrame:CGRectMake(totalWidth+_btnSpace*i, _btnHeight+_btnOffsetY, [_sectionFrameArray[i] floatValue],_btnSubImageHeight)];
