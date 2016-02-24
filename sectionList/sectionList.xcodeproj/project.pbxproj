@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B14DE651C7D5384002E2727 /* showImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B14DE641C7D5384002E2727 /* showImage.jpg */; };
 		9B5F23F21C7C566F00BA241D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F23F11C7C566F00BA241D /* main.m */; };
 		9B5F23F51C7C566F00BA241D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F23F41C7C566F00BA241D /* AppDelegate.m */; };
 		9B5F23F81C7C566F00BA241D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B5F23F71C7C566F00BA241D /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B14DE641C7D5384002E2727 /* showImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = showImage.jpg; sourceTree = "<group>"; };
 		9B5F23ED1C7C566F00BA241D /* sectionList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sectionList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5F23F11C7C566F00BA241D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B5F23F31C7C566F00BA241D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				9B5F23F71C7C566F00BA241D /* ViewController.m */,
 				9B5F24071C7C57F600BA241D /* WFSSelectionList.h */,
 				9B5F24081C7C57F600BA241D /* WFSSelectionList.m */,
+				9B14DE641C7D5384002E2727 /* showImage.jpg */,
 				9B5F23F91C7C566F00BA241D /* Main.storyboard */,
 				9B5F23FC1C7C566F00BA241D /* Assets.xcassets */,
 				9B5F23FE1C7C566F00BA241D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B14DE651C7D5384002E2727 /* showImage.jpg in Resources */,
 				9B5F24001C7C566F00BA241D /* LaunchScreen.storyboard in Resources */,
 				9B5F23FD1C7C566F00BA241D /* Assets.xcassets in Resources */,
 				9B5F23FB1C7C566F00BA241D /* Main.storyboard in Resources */,
@@ -304,6 +308,7 @@
 				9B5F24061C7C566F00BA241D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
