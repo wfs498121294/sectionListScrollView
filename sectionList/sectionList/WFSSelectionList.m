@@ -160,4 +160,25 @@
     
 }
 
+//处理无法滚动的情况
+- (BOOL)touchesShouldBegin:(NSSet *)touches withEvent:(UIEvent *)event inContentView:(UIView *)view
+{
+    UITouch *touch = [touches anyObject];
+    if(touch.phase == UITouchPhaseMoved)
+    {
+        return NO;
+    }
+    else
+    {
+        return [super touchesShouldBegin:touches withEvent:event inContentView:view];
+    }
+}
+
+
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view {
+    if ([view isKindOfClass:UIButton.class]) {
+        return YES;
+    }
+    return [super touchesShouldCancelInContentView:view];
+}
 @end
