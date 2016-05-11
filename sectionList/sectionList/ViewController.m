@@ -8,6 +8,12 @@
 
 #import "ViewController.h"
 
+
+// 当前设备的屏幕宽度
+#define KSCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
+// 当前设备的屏幕高度
+#define KSCREEN_HEIGHT   [[UIScreen mainScreen] bounds].size.height
+
 @interface ViewController ()
 
 @end
@@ -16,9 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    WFSSelectionList *scrollView = [[WFSSelectionList alloc] initWithFrame:CGRectMake(10, 100, 320, 40)];
+    WFSSelectionList *scrollView = [[WFSSelectionList alloc] initWithFrame:CGRectMake(0, 100, KSCREEN_WIDTH, 40) selectedBtn:^(UIButton *btn) {
+        
+        NSLog(@"***** 你点击了第 %ld 个按钮！", (long)btn.tag);
+        
+    }];
     scrollView.contentSize = CGSizeMake(500, 40);
     scrollView.backgroundColor = [UIColor grayColor];
+    
     [self.view addSubview:scrollView];
 }
 
