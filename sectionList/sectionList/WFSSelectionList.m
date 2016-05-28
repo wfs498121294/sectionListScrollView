@@ -19,15 +19,40 @@
     UIColor *_titleColor;//btn 字体颜色
     NSInteger _lastSelectedIndex;//上一个选中的btn下标
 }
-@property (nonatomic,strong)wfsBtnClicked clickedBtn;
+@property (nonatomic,copy)wfsBtnClicked clickedBtn;
 @end
 @implementation WFSSelectionList
 
--(instancetype)initWithFrame:(CGRect)frame
+//-(instancetype)initWithFrame:(CGRect)frame
+//{
+//    self = [super initWithFrame:frame];
+//    if (self)
+//    {
+//        _sectionLists = [NSArray arrayWithObjects:@"推荐",@"直播",@"FM",@"电视剧",@"影视",@"动漫",@"电视剧",@"电影",@"综艺节目",@"其他",nil];
+//        _sectionFrameArray = [NSMutableArray array];
+//        _btnTitleFont = 11.0;
+//        _lastSelectedIndex = 10;
+//        _btnHeight = 28.0;
+//        _btnSpace = 10.0;
+//        _btnOffsetY = 5.0;
+//        _btnSubImageHeight= 5.0;
+//        _titleColor = [UIColor blackColor];
+//        self.delaysContentTouches = NO;
+//        self.showsHorizontalScrollIndicator = NO;
+//        self.showsVerticalScrollIndicator = NO;
+//        [self getFrameFromData];
+//        [self addBtns];
+//    }
+//
+//    return self;
+//}
+
+- (instancetype)initWithFrame:(CGRect)frame selectedBtn:(wfsBtnClicked)clickedBtn
 {
-    self = [super initWithFrame:frame];
-    if (self)
-    {
+    self = [self initWithFrame:frame];
+    if (self) {
+        self.clickedBtn = clickedBtn;
+        
         _sectionLists = [NSArray arrayWithObjects:@"推荐",@"直播",@"FM",@"电视剧",@"影视",@"动漫",@"电视剧",@"电影",@"综艺节目",@"其他",nil];
         _sectionFrameArray = [NSMutableArray array];
         _btnTitleFont = 11.0;
@@ -42,16 +67,7 @@
         self.showsVerticalScrollIndicator = NO;
         [self getFrameFromData];
         [self addBtns];
-    }
 
-    return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame selectedBtn:(wfsBtnClicked)clickedBtn
-{
-    self = [self initWithFrame:frame];
-    if (self) {
-        self.clickedBtn = clickedBtn;
     }
     return self;
 }
@@ -103,7 +119,7 @@
 
 }
 
--(void)btnClicked:(UIButton *)sender
+- (void)btnClicked:(UIButton *)sender
 {
     if (sender.tag!=_lastSelectedIndex)//判断是否单击的是 选中项
     {
